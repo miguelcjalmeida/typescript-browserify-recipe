@@ -6,6 +6,7 @@ let buffer = require('vinyl-buffer')
 let sourcemaps = require('gulp-sourcemaps')
 let uglify = require('gulp-uglify')
 let rename = require('gulp-rename')
+let notify = require("gulp-notify");
 
 gulp.task('build-ts', [], () => {
     return browserify({
@@ -15,6 +16,10 @@ gulp.task('build-ts', [], () => {
     .plugin(tsify)
     .transform('babelify', {extensions: ['.ts', '.tsx']})
     .bundle()
+    .on('error', notify.onError({
+        message: "Error: <%= error.message %>",
+        title: "Failed running browserify"
+    }))
     .pipe(source('bundle.js'))
     .pipe(buffer())
     .pipe(sourcemaps.init({loadMaps: true}))
