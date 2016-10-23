@@ -20,7 +20,7 @@ gulp.task('build-ts', [], () => {
     .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(uglify())
     .pipe(rename({extname: '.min.js'}))
-    .pipe(sourcemaps.write('./'))
+    .pipe(sourcemaps.write('./', {sourceRoot: '../'}))
     .pipe(gulp.dest('./dist'))
 })
 
