@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "target": "es2015",
+        "strictNullChecks": true,
+        "noUnusedLocals": true,
+        "noImplicitThis": true,
+        "noImplicitReturns": true,
+        "noImplicitAny": true,
+        "noFallthroughCasesInSwitch": true
+    }
+}
