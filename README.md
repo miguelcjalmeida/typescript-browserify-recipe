@@ -31,6 +31,7 @@ Its the list of features of this recipe.
 - Browserify
 - Minification
 - Sourcemaps
+- VsCode: debug and extensions
 
 ## Contribution
 
