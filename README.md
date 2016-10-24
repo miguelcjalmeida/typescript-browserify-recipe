@@ -7,7 +7,7 @@ This is a quickstart project for typescript. The features of this quickstart is 
 Clone with
 
 ```
-git clone https://github.com/miguelcjalmeida/typescript-browserify-recipe
+git clone https://github.com/miguelcjalmeida/typescript-recipe
 ```
 
 Install dependencies:
